@@ -62,6 +62,7 @@ contract MockGovToken is BEP20("MockGovToken", "MGToken") {
      * @param delegatee The address to delegate votes to
      */
     function delegate(address delegatee) external {
+        // require(delegatee != address(0), "zero address");
         return _delegate(msg.sender, delegatee);
     }
 
